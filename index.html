@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Shofetis</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/jquery-mobile-shofetis.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="conexionApi.js"></script>
+	<style>
+		.bg{
+			background-image: url(images/logow.png); background-size: cover; background-repeat: no-repeat; margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+<!-- Página principal -->
+<div data-role="page" id="home" class="bg">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <h2 style="text-align: center;">Iniciar sesion</h2>
+		<img src="images/bannerbl.png" width=100%;>
+		<h4>Usuario</h4>
+		<input class="form-control col-12" type="email" placeholder="Usuario" aria-label=".form-control-sm example" name="email" required>
+		<h4>Contraseña</h4>
+		<input class="form-control col-12" type="password" placeholder="Contraseña" aria-label=".form-control-sm example" name="email" required>
+		
+	    <a href="#home" data-rel="close" class="ui-btn">Close usuario</a>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-position="fixed" clss="eclude">
+		<img src="images/banner.png" alt="" width="100%">
+	</div>
+
+		<h3 style="text-align: center;" class="eclude">¿Que desa ordenar?</h3>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="grid" class="ui-btn-active">Home</a></li>
+	        <li><a href="#artistas" data-icon="star" data-transition="flip" onclick="obtenerDatos()">Productos</a></li>
+	        <li><a href="#mypanel" data-icon="user">Usuario</a></li>
+	      </ul>
+	    </div><!-- /navbar -->
+	</div>
+</div>
+
+<!-- Página artistas -->
+<div data-role="page" id="artistas">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <h2 style="text-align: center;">Iniciar sesion</h2>
+		<img src="images/bannerbl.png" width=100%;>
+		<h4>Usuario</h4>
+		<input class="form-control col-12" type="email" placeholder="Usuario" aria-label=".form-control-sm example" name="email" required>
+		<h4>Contraseña</h4>
+		<input class="form-control col-12" type="password" placeholder="Contraseña" aria-label=".form-control-sm example" name="email" required>
+	    <a href="#home" data-rel="close" class="ui-btn">Close Usuario</a>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-position="fixed">
+		<img src="images/banner.png" alt="" width="100%">
+	</div>
+
+	<div role="main" class="ui-content">
+		<a href="#detalle" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Registrar Producto</a>
+		<ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar producto..." data-inset="true" id="datos">
+		</ul>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" class="container">
+	      <ul>
+	        <li><a href="#home" data-icon="grid" class="ui-btn-active">Home</a></li>
+	        <li><a href="#artistas" data-icon="star" data-transition="flip" onclick="obtenerDatos()">Productos</a></li>
+	        <li><a href="#mypanel" data-icon="user">Usuario</a></li>
+	      </ul>
+	    </div><!-- /navbar -->
+	</div>
+</div>
+
+<!-- Página Registro -->
+<div data-role="page" id="detalle">
+
+	<div data-role="panel" id="mypanel" data-display="overlay">
+	    <h2 style="text-align: center;">Iniciar sesion</h2>
+		<img src="images/bannerbl.png" width=100%;>
+		<h4>Usuario</h4>
+		<input class="form-control col-12" type="email" placeholder="Usuario" aria-label=".form-control-sm example" name="email" required>
+		<h4>Contraseña</h4>
+		<input class="form-control col-12" type="password" placeholder="Contraseña" aria-label=".form-control-sm example" name="email" required>
+	    <a href="#home" data-rel="close" class="ui-btn">Close panel</a>
+	</div><!-- /panel -->
+
+
+	<div data-role="header" data-position="fixed">
+		<img src="images/banner.png" alt="" width="100%">
+	</div>
+
+	<div role="main" class="ui-content">
+		<div id="imagen">
+			
+		</div>
+		<div style="text-align: center;" id="nombre_artista">
+
+		</div>
+		<a href="#artistas" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left">Regresar</a>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+	      <ul>
+	        <li><a href="#home" data-icon="grid" class="ui-btn-active">Home</a></li>
+	        <li><a href="#artistas" data-icon="star" data-transition="flip" onclick="obtenerDatos()">Productos</a></li>
+	        <li><a href="#mypanel" data-icon="user">Usuario</a></li>
+	      </ul>
+	    </div><!-- /navbar -->
+	</div>
+</div>
+
+</body>
+</html>
